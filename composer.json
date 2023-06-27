@@ -80,7 +80,11 @@
         ],
         "post-update-cmd": [
             "@auto-scripts"
-        ]
+        ],
+        "cs-fix": "./vendor/bin/php-cs-fixer fix",
+        "phpstan": "./vendor/bin/phpstan analyze ./src",
+        "orm-schema-validate": "doctrine-manager orm:validate-schema",
+        "orm-clear-metadata": "doctrine-manager orm:clear-cache:metadata"
     },
     "conflict": {
         "symfony/symfony": "*"
@@ -92,6 +96,8 @@
         }
     },
     "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.19",
+        "phpstan/phpstan": "^1.10",
         "phpunit/phpunit": "^9.5",
         "symfony/browser-kit": "5.4.*",
         "symfony/css-selector": "5.4.*",
