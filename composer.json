@@ -40,7 +40,8 @@
         "symfony/web-link": "5.4.*",
         "symfony/yaml": "5.4.*",
         "twig/extra-bundle": "^2.12|^3.0",
-        "twig/twig": "^2.12|^3.0"
+        "twig/twig": "^2.12|^3.0",
+        "ext-json": "*"
     },
     "config": {
         "allow-plugins": {
@@ -82,7 +83,7 @@
             "@auto-scripts"
         ],
         "cs-fix": "./vendor/bin/php-cs-fixer fix",
-        "phpstan": "./vendor/bin/phpstan analyze ./src",
+        "phpstan": "./vendor/bin/phpstan analyze -c phpstan.neon",
         "orm-schema-validate": "doctrine-manager orm:validate-schema",
         "orm-clear-metadata": "doctrine-manager orm:clear-cache:metadata"
     },
@@ -96,9 +97,10 @@
         }
     },
     "require-dev": {
+        "doctrine/doctrine-fixtures-bundle": "^3.4",
         "friendsofphp/php-cs-fixer": "^3.19",
         "phpstan/phpstan": "^1.10",
-        "phpunit/phpunit": "^9.5",
+        "phpunit/phpunit": "^9.6",
         "symfony/browser-kit": "5.4.*",
         "symfony/css-selector": "5.4.*",
         "symfony/debug-bundle": "5.4.*",
