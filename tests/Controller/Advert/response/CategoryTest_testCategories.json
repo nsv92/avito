@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "id": "5",
+      "name": "Electronics",
+      "description": "Электротехника",
+      "slug": "electronics"
+    },
+    {
+      "id": "3",
+      "name": "Job",
+      "description": "Работа",
+      "slug": "job"
+    },
+    {
+      "id": "2",
+      "name": "Real_estate",
+      "description": "Недвижимость",
+      "slug": "real_estate"
+    },
+    {
+      "id": "4",
+      "name": "Services",
+      "description": "Услуги",
+      "slug": "services"
+    },
+    {
+      "id": "1",
+      "name": "Transport",
+      "description": "Транспорт",
+      "slug": "transport"
+    }
+  ]
+}
