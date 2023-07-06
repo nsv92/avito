@@ -26,6 +26,9 @@ class Category
         $this->categoryRepository = $categoryRepository;
     }
 
+    /**
+     * Get all advert categories.
+     */
     public function getCategories(): CategoryListResponse
     {
         $categories = $this->categoryRepository->findBy([], ['name' => Criteria::ASC]);
