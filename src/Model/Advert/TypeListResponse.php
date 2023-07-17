@@ -9,24 +9,24 @@ namespace App\Model\Advert;
  */
 class TypeListResponse
 {
-    //    /** @var array */
-    //    private $items;
-    //
-    //    /**
-    //     * CategoryListResponse constructor.
-    //     *
-    //     * @param $items array
-    //     */
-    //    public function __construct(array $items)
-    //    {
-    //        $this->items = $items;
-    //    }
-    //
-    //    /**
-    //     * Get items.
-    //     */
-    //    public function getItems(): array
-    //    {
-    //        return $this->items;
-    //    }
+    /** @var TypeListItem[] */
+    private $items;
+
+    /**
+     * CategoryListResponse constructor.
+     *
+     * @param TypeListItem[] $items
+     */
+    public function __construct(array $items)
+    {
+        $this->items = $items;
+    }
+
+    /**
+     * @return TypeListItem[]
+     */
+    public function getItems(): array
+    {
+        return $this->items;
+    }
 }

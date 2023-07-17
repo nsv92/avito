@@ -4,13 +4,20 @@ declare(strict_types=1);
 
 namespace App\Entity\Advert;
 
+use App\Common\ORM\ModifiedAtInterface;
+use App\Common\ORM\ModifiedAtTrait;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Class Type.
+ *
+ * @ORM\Entity(repositoryClass="App\Repository\Advert\Type")
+ *
+ * @ORM\Table(name="advert_type")
  */
-class Type
+class Type implements ModifiedAtInterface
 {
+    use ModifiedAtTrait;
     /**
      * @var string|null
      *
@@ -35,4 +42,48 @@ class Type
      * @ORM\Column(name="slug", type="string", length=50, nullable=false)
      */
     protected $slug;
+
+    /**
+     * Get id.
+     */
+    public function getId(): ?string
+    {
+        return $this->id;
+    }
+
+    /**
+     * Get name.
+     */
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set name.
+     */
+    public function setName(string $name): Type
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get slug.
+     */
+    public function getSlug(): string
+    {
+        return $this->slug;
+    }
+
+    /**
+     * Set slug.
+     */
+    public function setSlug(string $slug): Type
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
 }

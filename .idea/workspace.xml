@@ -5,30 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd5bb973-f6e0-4dce-905c-e9fdd45542bf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/phpstan.neon" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Advert/Category.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Advert/Category.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Advert/Type.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Advert/CategoryListItem.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Advert/CategoryListResponse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Advert/TypeListResponse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/Advert/Category.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/Advert/Type.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/Advert/Category.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Common/ORM/ModifiedAtInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Common/ORM/ModifiedAtTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Advert/Type.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataFixtures/Advert/TypeFixtures.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Advert/TypeListItem.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/Advert/Type.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/avito.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/avito.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20230705114151.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/Advert/CategoryFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/Advert/CategoryFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Advert/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Advert/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Advert/Type.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Advert/Type.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Advert/TypeListResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Advert/TypeListResponse.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="DONT_SYNCHRONIZE">
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable path="composer" />
@@ -42,6 +40,10 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpDebugGeneral" xdebug_debug_port="9999" listening_started="true">
+    <xdebug_debug_ports port="9999" />
+    <xdebug_debug_ports port="9003" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4">
     <include_path>
@@ -179,6 +181,10 @@
       <path value="$PROJECT_DIR$/vendor/symfony/flex" />
       <path value="$PROJECT_DIR$/vendor/friendsofphp/php-cs-fixer" />
       <path value="$PROJECT_DIR$/vendor/phpstan/phpstan" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
+      <path value="$PROJECT_DIR$/vendor/nelmio/api-doc-bundle" />
+      <path value="$PROJECT_DIR$/vendor/zircote/swagger-php" />
     </include_path>
   </component>
   <component name="ProjectId" id="2RjjpaEI4SW5pjDWsJi4maGqkoo" />
@@ -186,43 +192,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary": "PHPUnit",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/sergei_n/study/php/avito",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "php.override.implement.member.chooser.php.doc": "NONE",
-    "settings.editor.selected.configurable": "fileTemplates",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary&quot;: &quot;PHPUnit&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/sergei_n/study/php/avito&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;php.override.implement.member.chooser.php.doc&quot;: &quot;NONE&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;php.test.frameworks.configurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Composer Script.phpstan">
-    <configuration name="cs-check" type="ComposerRunConfigurationType" factoryName="Composer Script" temporary="true">
-      <option name="pathToComposerJson" value="$PROJECT_DIR$/composer.json" />
-      <option name="script" value="cs-check" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="PHPUnit.tests">
     <configuration name="cs-fix" type="ComposerRunConfigurationType" factoryName="Composer Script" temporary="true">
       <option name="pathToComposerJson" value="$PROJECT_DIR$/composer.json" />
       <option name="script" value="cs-fix" />
-      <method v="2" />
-    </configuration>
-    <configuration name="orm-clear-metadata" type="ComposerRunConfigurationType" factoryName="Composer Script" temporary="true">
-      <option name="pathToComposerJson" value="$PROJECT_DIR$/composer.json" />
-      <option name="script" value="orm-clear-metadata" />
       <method v="2" />
     </configuration>
     <configuration name="phpstan" type="ComposerRunConfigurationType" factoryName="Composer Script" temporary="true">
@@ -230,12 +226,25 @@
       <option name="script" value="phpstan" />
       <method v="2" />
     </configuration>
+    <configuration name="CategoryTest (1)" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="App\Tests\Controller\Advert\CategoryTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Controller/Advert/CategoryTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CategoryTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="App\Service\Advert\CategoryTest" file="$PROJECT_DIR$/tests/App/Service/Advert/CategoryTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml.dist" directory="$PROJECT_DIR$/tests" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.tests" />
+        <item itemvalue="PHPUnit.CategoryTest (1)" />
+        <item itemvalue="PHPUnit.CategoryTest" />
         <item itemvalue="Composer Script.phpstan" />
         <item itemvalue="Composer Script.cs-fix" />
-        <item itemvalue="Composer Script.orm-clear-metadata" />
-        <item itemvalue="Composer Script.cs-check" />
       </list>
     </recent_temporary>
   </component>
@@ -254,7 +263,12 @@
       <workItem from="1687776085623" duration="26854000" />
       <workItem from="1688388382665" duration="283000" />
       <workItem from="1688388674085" duration="941000" />
-      <workItem from="1688391117258" duration="18600000" />
+      <workItem from="1688391117258" duration="43901000" />
+      <workItem from="1688727188006" duration="597000" />
+      <workItem from="1688728801808" duration="1730000" />
+      <workItem from="1689190513370" duration="8497000" />
+      <workItem from="1689540130422" duration="3789000" />
+      <workItem from="1689606508731" duration="925000" />
     </task>
     <servers />
   </component>

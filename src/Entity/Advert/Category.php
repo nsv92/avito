@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Entity\Advert;
 
+use App\Common\ORM\ModifiedAtInterface;
+use App\Common\ORM\ModifiedAtTrait;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -13,8 +15,10 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Table(name="advert_category")
  */
-class Category
+class Category implements ModifiedAtInterface
 {
+    use ModifiedAtTrait;
+
     /**
      * @var string|null
      *
