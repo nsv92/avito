@@ -13,7 +13,11 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Entity(repositoryClass="App\Repository\Advert\Type")
  *
- * @ORM\Table(name="advert_type")
+ * @ORM\Table(name="advert_type",
+ *      uniqueConstraints={@ORM\UniqueConstraint(columns={"name"})}
+ * )
+ *
+ * @ORM\HasLifecycleCallbacks()
  */
 class Type implements ModifiedAtInterface
 {

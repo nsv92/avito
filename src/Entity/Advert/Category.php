@@ -13,7 +13,11 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Entity(repositoryClass="App\Repository\Advert\Category")
  *
- * @ORM\Table(name="advert_category")
+ * @ORM\Table(name="advert_category",
+ *      uniqueConstraints={@ORM\UniqueConstraint(columns={"name"})}
+ * )
+ *
+ * @ORM\HasLifecycleCallbacks()
  */
 class Category implements ModifiedAtInterface
 {
@@ -46,7 +50,7 @@ class Category implements ModifiedAtInterface
      *      length=150,
      *      nullable=true,
      *      options={"comment"="Описание категории"}
-     *     )
+     * )
      */
     protected $description;
 
