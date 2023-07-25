@@ -13,23 +13,49 @@ use Doctrine\Persistence\ObjectManager;
  */
 class CategoryFixtures extends Fixture
 {
+    public const TRANSPORT_CATEGORY = 'transport';
+    public const REAL_ESTATE_CATEGORY = 'real_estate';
+    public const JOB_CATEGORY = 'job';
+    public const SERVICE_CATEGORY = 'service';
+    public const ELECTRONICS_CATEGORY = 'electronics';
+
+    /**
+     * {@inheritDoc}
+     *
+     * @param ObjectManager $manager
+     *
+     * @return void
+     */
     public function load(ObjectManager $manager): void
     {
-        $manager->persist(
-            (new Category())->setName('Transport')->setSlug('transport')->setDescription('Транспорт')
-        );
-        $manager->persist(
-            (new Category())->setName('Real_estate')->setSlug('real_estate')->setDescription('Недвижимость')
-        );
-        $manager->persist(
-            (new Category())->setName('Job')->setSlug('job')->setDescription('Работа')
-        );
-        $manager->persist(
-            (new Category())->setName('Services')->setSlug('services')->setDescription('Услуги')
-        );
-        $manager->persist(
-            (new Category())->setName('Electronics')->setSlug('electronics')->setDescription('Электротехника')
-        );
+        $categories = [
+            self::TRANSPORT_CATEGORY => (new Category())
+                ->setName('transport')
+                ->setSlug('transport')
+                ->setDescription('Транспорт'),
+            self::REAL_ESTATE_CATEGORY => (new Category())
+                ->setName('real_estate')
+                ->setSlug('real_estate')
+                ->setDescription('Недвижимость'),
+            self::JOB_CATEGORY => (new Category())
+                ->setName('job')
+                ->setSlug('job')
+                ->setDescription('Работа'),
+            self::SERVICE_CATEGORY => (new Category())
+                ->setName('service')
+                ->setSlug('service')
+                ->setDescription('Услуги'),
+            self::ELECTRONICS_CATEGORY => (new Category())
+                ->setName('electronics')
+                ->setSlug('electronics')
+                ->setDescription('Электротехника'),
+        ];
+        foreach ($categories as $category) {
+            $manager->persist($category);
+        }
         $manager->flush();
+        foreach ($categories as $referenceName => $category) {
+            $this->addReference($referenceName, $category);
+        }
     }
 }

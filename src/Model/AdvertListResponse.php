@@ -7,7 +7,7 @@ namespace App\Model;
 /**
  * Class AdvertResponse.
  */
-class AdvertResponse
+class AdvertListResponse
 {
     /** @var AdvertListItem[] */
     protected $items;
