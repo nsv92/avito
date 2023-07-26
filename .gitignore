@@ -3,6 +3,9 @@
 /.idea
 /.env
 
+**/.idea/workspace.xml
+**/.idea/tasks.xml
+
 /.env.local
 /.env.local.php
 /.env.*.local
