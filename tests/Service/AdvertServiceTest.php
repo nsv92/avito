@@ -29,14 +29,11 @@ class AdvertServiceTest extends AbstractTestCase
             ->method('find')
             ->with(self::NOT_FOUND)
             ->willReturn(null);
-        //            ->willThrowException(new NotFoundException());
         $categoryRepository = $this->createMock(CategoryRepository::class);
         $typeRepository->expects($this->any())
             ->method('find')
             ->with(self::NOT_FOUND)
             ->willReturn(null);
-        //            ->willThrowException(new NotFoundException());
-
         $this->expectException(NotFoundException::class);
         (new AdvertService($advertRepository, $typeRepository, $categoryRepository))
             ->getAdvertByCategoryAndType(self::NOT_FOUND, self::NOT_FOUND);
