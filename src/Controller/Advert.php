@@ -6,6 +6,8 @@ namespace App\Controller;
 
 use App\Service\Advert as AdvertService;
 use App\Service\Exception\NotFoundException;
+use Nelmio\ApiDocBundle\Annotation\Model;
+use OpenApi\Annotations as OA;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\HttpException;
@@ -30,6 +32,13 @@ class Advert extends AbstractController
     }
 
     /**
+     * @OA\Response(
+     *     response=200,
+     *     description="Return books with given type and category",
+     *
+     *     @Model(type="AdvertListResponse::class")
+     * )
+     *
      * @Route(path="/api/v1/type/{typeId}/category/{categoryId}/adverts", methods={"GET"})
      *
      * @param int $categoryId
@@ -37,7 +46,7 @@ class Advert extends AbstractController
      *
      * @return Response
      */
-    public function AdvertByCategoryAndType(int $categoryId, int $typeId): Response
+    public function advertByCategoryAndType(int $categoryId, int $typeId): Response
     {
         try {
             return $this->json($this->advertService->getAdvertByCategoryAndType($categoryId, $typeId));

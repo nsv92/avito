@@ -54,13 +54,17 @@ class Advert
     public function getAdvertByCategoryAndType(int $categoryId, int $typeId): AdvertListResponse
     {
         $category = $this->categoryRepository->find($categoryId);
-        if (!$category instanceof AdvertCategoryEntity) {
-            throw NotFoundException::advertCategoryNotFound((string) $categoryId);
-        }
-
         $type = $this->typeRepository->find($typeId);
+
+        $exceptionParams = [];
+        if (!$category instanceof AdvertCategoryEntity) {
+            $exceptionParams['category'] = $categoryId;
+        }
         if (!$type instanceof AdvertTypeEntity) {
-            throw NotFoundException::advertTypeNotFound((string) $typeId);
+            $exceptionParams['type'] = $typeId;
+        }
+        if (0 != count($exceptionParams)) {
+            throw NotFoundException::advertCategoryOrTypeNotFound(json_encode($exceptionParams));
         }
 
         return new AdvertListResponse(array_map(

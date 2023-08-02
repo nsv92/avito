@@ -7,13 +7,13 @@ use App\Model\Advert\CategoryListItem;
 use App\Model\Advert\CategoryListResponse;
 use App\Repository\Advert\Category as CategoryRepository;
 use App\Service\Advert\Category;
+use App\Tests\AbstractTestCase;
 use Doctrine\Common\Collections\Criteria;
-use PHPUnit\Framework\TestCase;
 
 /**
  * Class CategoryTest.
  */
-class CategoryTest extends TestCase
+class CategoryTest extends AbstractTestCase
 {
     public const NAME = 'some_name';
     public const DESCRIPTION = 'some_description';
@@ -21,6 +21,8 @@ class CategoryTest extends TestCase
 
     /**
      * @return void
+     *
+     * @throws \ReflectionException
      */
     public function testGetCategories()
     {
@@ -31,14 +33,16 @@ class CategoryTest extends TestCase
         $this->assertEquals($expected, $categoryService->getCategories());
     }
 
+    /**
+     * @throws \ReflectionException
+     */
     protected function getRepositoryMock(): CategoryRepository
     {
-        $categoryEntity = new class() extends AdvertCategoryEntity {
-            public function getId(): ?string
-            {
-                return '1';
-            }
-        };
+        $categoryEntity = (new AdvertCategoryEntity())
+            ->setName(self::NAME)
+            ->setDescription(self::DESCRIPTION)
+            ->setSlug(self::SLUG);
+        $this->setEntityId($categoryEntity, '1');
         $mock = $this->getMockBuilder(CategoryRepository::class)
             ->onlyMethods(['findBy'])
             ->disableOriginalConstructor()
@@ -47,10 +51,7 @@ class CategoryTest extends TestCase
             ->method('findBy')
             ->with([], ['name' => Criteria::ASC])
             ->willReturn([
-                $categoryEntity
-                    ->setName(self::NAME)
-                    ->setDescription(self::DESCRIPTION)
-                    ->setSlug(self::SLUG),
+                $categoryEntity,
             ]);
 
         return $mock;
