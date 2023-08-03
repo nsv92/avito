@@ -32,7 +32,7 @@ class Advert extends ServiceEntityRepository
      * @param AdvertCategoryEntity $category
      * @param AdvertTypeEntity     $type
      *
-     * @return AdvertEntity[]|array|object[]
+     * @return AdvertEntity[]
      */
     public function getAdvertByCategoryAndType(AdvertCategoryEntity $category, AdvertTypeEntity $type): array
     {

@@ -46,12 +46,12 @@ class Advert
     /**
      * Get adverts by category and type.
      *
-     * @param int $categoryId
-     * @param int $typeId
+     * @param string $categoryId
+     * @param string $typeId
      *
      * @return AdvertListResponse
      */
-    public function getAdvertByCategoryAndType(int $categoryId, int $typeId): AdvertListResponse
+    public function getAdvertByCategoryAndType(string $categoryId, string $typeId): AdvertListResponse
     {
         $category = $this->categoryRepository->find($categoryId);
         $type = $this->typeRepository->find($typeId);

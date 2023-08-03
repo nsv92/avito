@@ -41,12 +41,12 @@ class Advert extends AbstractController
      *
      * @Route(path="/api/v1/type/{typeId}/category/{categoryId}/adverts", methods={"GET"})
      *
-     * @param int $categoryId
-     * @param int $typeId
+     * @param string $categoryId
+     * @param string $typeId
      *
      * @return Response
      */
-    public function advertByCategoryAndType(int $categoryId, int $typeId): Response
+    public function advertByCategoryAndType(string $categoryId, string $typeId): Response
     {
         try {
             return $this->json($this->advertService->getAdvertByCategoryAndType($categoryId, $typeId));
